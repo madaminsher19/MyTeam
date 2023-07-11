@@ -1,0 +1,99 @@
+.build {
+    padding: 140px 165px;
+    background: #012f34;
+    position: relative;
+    &::after {
+        content: url("../img/svj/build-image.svg");
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: 445px;
+        position: relative;
+        color: #fff;
+        font-family: Livvic;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -54px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: #f67e7e;
+        }
+    }
+    &__list {
+        max-width: 500px;
+    }
+    &__item {
+        display: flex;
+        align-items: start;
+        gap: 23px;
+        margin-bottom: 32px;
+    }
+
+    &__subtitle {
+        margin-bottom: 16px;
+        color: #f67e7e;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    &__text {
+        color: #fff;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .build {
+        &::after {
+            top: 0;
+        }
+
+        &__title {
+            color: #fff;
+            font-family: Livvic;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+        }
+        padding: 136px 40px;
+        &__content {
+            flex-direction: column;
+            gap: 64px;
+        }
+    }
+}
+
+@media only screen and (max-width:550px){
+    .build{
+        padding: 100px 24px;
+
+        &__title {
+           max-width: 200px;
+        }
+
+        &__item {
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+
+           margin-bottom: 48px;
+        }
+    }
+}
